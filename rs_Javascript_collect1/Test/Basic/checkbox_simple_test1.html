@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>Check box test</title>
+</head>
+
+<script type="text/javascript" language="javascript">
+function clicked_del_node(ichkbx, ilabelid) {
+
+	  var labelvar = document.getElementById(ilabelid);
+      if (ichkbx.checked == true){
+      	labelvar.style.backgroundColor = "red";
+      	labelvar.style.fontSize = "x-large";
+		labelvar.style.padding = "7px";
+      } else {
+      	labelvar.style.backgroundColor =  "rgba(255, 255, 255, 0.0)";      
+      	labelvar.style.fontSize = "medium";
+		labelvar.style.padding = "1px";
+      }
+      
+}
+</script>
+
+<body>
+
+<input type="checkbox" name="del_node" id="chkbx_del_node"
+  onclick="clicked_del_node(this, 'label_del_node');" />
+<label for="chkbx_del_node" id="label_del_node">Delete this node</label>
+
+</body>
+</html>

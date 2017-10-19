@@ -1,0 +1,40 @@
+<html>
+<head>
+<title>Test Wait Dock</title>
+
+<script type="text/javascript" src="WaitDocks1_9.js"></script>
+<script type="text/javascript">
+function start_WaitDocks(){
+	wdock1 = new WaitDocks(function(){
+		document.getElementById("procarea1").innerHTML = new Date();
+	},
+	function(){
+		document.getElementById("message1").innerHTML = "Hello.";	
+	}, function(){
+		document.getElementById("message1").innerHTML = "Failed...";	
+	},
+	"waitdockloc1",
+	5000, // proc_millisec
+	250, // itimeintrv
+	15000); // cmax_millisec
+	wdock1.loop();
+};
+</script>
+
+</head>
+<body onLoad="start_WaitDocks()">
+<div id="procarea1">
+Process area.
+</div>
+<div id="waitdockloc1">
+Dock spot.
+</div>
+<div id="message1">
+Message will appear here at the end.
+</div>
+
+<input type="button" value="Press" onclick="wdock1.invoke_stop_sequence()"/>
+
+</body>
+</html>
+

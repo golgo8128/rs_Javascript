@@ -1,0 +1,29 @@
+<html>
+<head>
+<title>JSON read test 1-2</title>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+<script>
+$(function() {
+	
+	$.getJSON("http://127.0.0.1:8000/app/BatchAdjust/testjson/Hello/",
+			  function( iobj ) {
+				  
+		document.write(iobj.Data1);
+
+	});	
+	
+});
+</script>
+
+</head>
+<body>
+
+<p>...</p>
+	
+
+<!-- http://stackoverflow.com/questions/22156664/what-does-the-dot-after-dollar-sign-mean-in-jquery-when-declaring-variables -->
+
+</body>
+
+</html>

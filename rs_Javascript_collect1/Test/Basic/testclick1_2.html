@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sample Web Page</title>
+
+<style type="text/css">
+div.showhidee {
+	display: none;
+}
+</style>
+
+<script type="text/javascript">
+
+function showhide_switcher(ielem, iact) {
+	var tgt_div_id = ielem.id.replace("_switch", "");
+	var tgt_elem = document.getElementById(tgt_div_id);
+	
+	// alert(tgt_elem.style.display);
+	
+	if(iact == "switch"){
+		if(tgt_elem.style.display == "block"){
+			tgt_elem.style.display = "none";
+		} else {
+			tgt_elem.style.display = "block";
+		}
+    } else {
+    	tgt_elem.style.display = iact;
+    }
+    
+    // alert(tgt_elem.style.display);
+    
+}
+
+</script>
+
+</head>
+
+Hello, World!
+
+<div class="showhider" id="showhide1_switch" onclick='showhide_switcher(this, "switch")'; >
+--> Click <--
+</div>
+
+<div class="showhidee" id="showhide1">
+Can you see it?
+</div>
+
+ <div class="showhider" id="showhide2_switch" onclick='showhide_switcher(this, "switch")'; >
+--> Click!!! <--
+</div>
+
+<div class="showhidee" id="showhide2">
+Can you see it????
+</div>
+ 
+ 
+</body>
+</html>
